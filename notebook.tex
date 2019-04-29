@@ -1,0 +1,464 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={LicitaÃ§Ãµes em Santa Catarina desde 2014},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{LicitaÃ§Ãµes em Santa Catarina desde 2014}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+
+\begin{document}
+\maketitle
+
+\section{Ministério do Planejamento}\label{ministerio-do-planejamento}
+
+\section{Desenvolvimento e Gestão}\label{desenvolvimento-e-gestao}
+
+\section{CRIADO - 24 de Setembro de 2014, 16:17
+(UTC-03:00)}\label{criado---24-de-setembro-de-2014-1617-utc-0300}
+
+\section{ATUALIZADO - 22 de Outubro de 2018, 16:58
+(UTC-03:00)}\label{atualizado---22-de-outubro-de-2018-1658-utc-0300}
+
+\section{Frequência - Mensal}\label{frequencia---mensal}
+
+Fornecedores de SC tenho apenas 500 de 15.138
+
+Ministério do Planejamento, Desenvolvimento e Gestão - MP O Ministério
+do Planejamento, Desenvolvimento e Gestão (MP) é um órgão integrante do
+poder Executivo Federal, que atua na:
+
+Formulação do planejamento estratégico nacional; Avaliação dos impactos
+socioeconômicos das políticas e programas do governo federal e na
+elaboração de estudos especiais para a reformulação de políticas;
+Realização de estudos e pesquisas para acompanhamento da conjuntura
+socioeconômica e gestão dos istemas cartográficos e estatísticos
+nacionais; Elaboração, acompanhamento e avaliação das leis de iniciativa
+do Poder Executivo federal previstas no rt. 165 da Constituição;
+Viabilização de novas fontes de recursos para os planos de governo;
+Coordenação da gestão de parcerias público-privadas (PPP's); Coordenação
+do Programa de Aceleração do Crescimento -- PAC; Formulação de
+diretrizes, coordenação das negociações, acompanhamento e avaliação dos
+financiamentos externos de projetos públicos com organismos
+multilaterais e agências governamentais; Coordenação e gestão dos
+sistemas de planejamento e orçamento federal, de pessoal civil, de
+administraço de recursos da informação e informática e de serviços
+gerais, bem como das ações de organização e odernização administrativa
+do governo federal; Formulação de diretrizes, coordenação e definição de
+critérios de governança corporativa das empresas estatais federais;
+Administração patrimonial; e Política e diretrizes para modernização da
+administração pública federal.
+
+\url{http://dados.gov.br/dataset/compras-publicas-do-governo-federal}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr)}
+\NormalTok{contratos <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/contratos/v1/contratos.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   .default = col_character()
+## )
+\end{verbatim}
+
+\begin{verbatim}
+## See spec(...) for full column specifications.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: 6 parsing failures.
+## row              col           expected     actual                                                     file
+## 353 Fundamento Legal delimiter or quote C          'http://compras.dados.gov.br/contratos/v1/contratos.csv'
+## 353 Fundamento Legal delimiter or quote R          'http://compras.dados.gov.br/contratos/v1/contratos.csv'
+## 353 NA               21 columns         18 columns 'http://compras.dados.gov.br/contratos/v1/contratos.csv'
+## 448 Objeto           delimiter or quote C          'http://compras.dados.gov.br/contratos/v1/contratos.csv'
+## 448 Objeto           delimiter or quote R          'http://compras.dados.gov.br/contratos/v1/contratos.csv'
+## ... ................ .................. .......... ........................................................
+## See problems(...) for more details.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(contratos)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "Identificador do Contrato"        "UASG"                            
+##  [3] "Modalidade da Licitação"          "Número do Aviso da Licitação"    
+##  [5] "Código do Contrato"               "Licitação associada"             
+##  [7] "Origem da Licitação"              "Número"                          
+##  [9] "Objeto"                           "Número de Aditivos"              
+## [11] "Número do Processo"               "CPF Contratada"                  
+## [13] "CNPJ Contratada"                  "Data de Assinatura"              
+## [15] "Fundamento Legal"                 "Data de Início da Vigência"      
+## [17] "Data de Termino da Vigência"      "Valor inicial"                   
+## [19] "Aditivos do Contrato > uri"       "Apostilamentos do Contrato > uri"
+## [21] "Eventos do Contrato > uri"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fornecedoresSC <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/fornecedores/v1/fornecedores.csv?uf=SC"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   Id = col_double(),
+##   CNPJ = col_character(),
+##   CPF = col_character(),
+##   Nome = col_character(),
+##   Ativo = col_character(),
+##   Recadastrado = col_character(),
+##   Município = col_character(),
+##   UF = col_character(),
+##   `Natureza Jurídica` = col_character(),
+##   `Porte da Empresa` = col_character(),
+##   `Ramo do Negócio` = col_character(),
+##   `Unidade Cadastradora` = col_character(),
+##   CNAE = col_character(),
+##   `CNAE Secundário` = col_logical(),
+##   `Habilitado a Licitar` = col_character()
+## )
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(fornecedoresSC)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "Id"                   "CNPJ"                 "CPF"                 
+##  [4] "Nome"                 "Ativo"                "Recadastrado"        
+##  [7] "Município"            "UF"                   "Natureza Jurídica"   
+## [10] "Porte da Empresa"     "Ramo do Negócio"      "Unidade Cadastradora"
+## [13] "CNAE"                 "CNAE Secundário"      "Habilitado a Licitar"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{IRP <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/licitacoes/v1/irps.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   UASG = col_character(),
+##   `Número da IRP` = col_character(),
+##   `Modalidade da Licitação` = col_character(),
+##   `Número do Aviso da Licitação` = col_character(),
+##   `Tipo da Licitação` = col_character(),
+##   `Justificativa da Modalidade` = col_character(),
+##   Objeto = col_character(),
+##   `CPF do Responsável` = col_character(),
+##   `Nome do Responsável` = col_character(),
+##   `Prazo de Validade (em meses)` = col_character(),
+##   `Município da UASG gerenciadora da IRP` = col_character(),
+##   `UF da UASG gerenciadora da IRP` = col_character(),
+##   `Situação da IRP` = col_logical(),
+##   `Órgão da UASG` = col_character(),
+##   `Data provável da licitação` = col_logical(),
+##   `Itens da intenção de registro de preço > uri` = col_character()
+## )
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: 6 parsing failures.
+## row col   expected     actual                                                 file
+##   2  -- 16 columns 7 columns  'http://compras.dados.gov.br/licitacoes/v1/irps.csv'
+##   3  -- 16 columns 10 columns 'http://compras.dados.gov.br/licitacoes/v1/irps.csv'
+## 106  -- 16 columns 7 columns  'http://compras.dados.gov.br/licitacoes/v1/irps.csv'
+## 107  -- 16 columns 10 columns 'http://compras.dados.gov.br/licitacoes/v1/irps.csv'
+## 427  -- 16 columns 7 columns  'http://compras.dados.gov.br/licitacoes/v1/irps.csv'
+## ... ... .......... .......... ....................................................
+## See problems(...) for more details.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(IRP)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "UASG"                                        
+##  [2] "Número da IRP"                               
+##  [3] "Modalidade da Licitação"                     
+##  [4] "Número do Aviso da Licitação"                
+##  [5] "Tipo da Licitação"                           
+##  [6] "Justificativa da Modalidade"                 
+##  [7] "Objeto"                                      
+##  [8] "CPF do Responsável"                          
+##  [9] "Nome do Responsável"                         
+## [10] "Prazo de Validade (em meses)"                
+## [11] "Município da UASG gerenciadora da IRP"       
+## [12] "UF da UASG gerenciadora da IRP"              
+## [13] "Situação da IRP"                             
+## [14] "Órgão da UASG"                               
+## [15] "Data provável da licitação"                  
+## [16] "Itens da intenção de registro de preço > uri"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{licitacoes <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/licitacoes/v1/licitacoes.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   UASG = col_character(),
+##   `Modalidade da Licitação` = col_character(),
+##   `Número do Aviso da Licitação` = col_character(),
+##   `Identificador da Licitação` = col_character(),
+##   `Tipo do Pregão` = col_character(),
+##   `Situação do Aviso` = col_character(),
+##   Objeto = col_character(),
+##   `Informações Gerais` = col_character(),
+##   `Número do Processo` = col_character(),
+##   `Tipo de Recurso` = col_character(),
+##   `Número de Itens na Licitação` = col_double(),
+##   `Nome do Responsável` = col_character(),
+##   `Função do Responsável` = col_character(),
+##   `Data de Entrega do Edital` = col_character(),
+##   `Endereço de Entrega do Edital` = col_character(),
+##   `Data de Abertura da Proposta` = col_character(),
+##   `Data de Entrega da Proposta` = col_character(),
+##   `Data de Publicação` = col_character(),
+##   `Itens da licitação > uri` = col_character()
+## )
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(licitacoes)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "UASG"                          "Modalidade da Licitação"      
+##  [3] "Número do Aviso da Licitação"  "Identificador da Licitação"   
+##  [5] "Tipo do Pregão"                "Situação do Aviso"            
+##  [7] "Objeto"                        "Informações Gerais"           
+##  [9] "Número do Processo"            "Tipo de Recurso"              
+## [11] "Número de Itens na Licitação"  "Nome do Responsável"          
+## [13] "Função do Responsável"         "Data de Entrega do Edital"    
+## [15] "Endereço de Entrega do Edital" "Data de Abertura da Proposta" 
+## [17] "Data de Entrega da Proposta"   "Data de Publicação"           
+## [19] "Itens da licitação > uri"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{materiais <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/materiais/v1/materiais.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   `Código do Item` = col_double(),
+##   `Descrição do Item` = col_character(),
+##   Grupo = col_character(),
+##   Classe = col_character(),
+##   PDM = col_character(),
+##   Status = col_character(),
+##   Sustentável = col_character()
+## )
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(materiais)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Código do Item"    "Descrição do Item" "Grupo"            
+## [4] "Classe"            "PDM"               "Status"           
+## [7] "Sustentável"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{servicos <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/servicos/v1/servicos.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   Código = col_double(),
+##   Descrição = col_character(),
+##   `Unidade medida` = col_character(),
+##   CPC = col_double(),
+##   Seção = col_character(),
+##   Divisão = col_character(),
+##   Grupo = col_character(),
+##   Classe = col_character(),
+##   Subclasse = col_character()
+## )
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(servicos)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Código"         "Descrição"      "Unidade medida" "CPC"           
+## [5] "Seção"          "Divisão"        "Grupo"          "Classe"        
+## [9] "Subclasse"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tpContrato <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"http://compras.dados.gov.br/contratos/v1/tipos_contrato.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Parsed with column specification:
+## cols(
+##   Código = col_double(),
+##   Descrição = col_character()
+## )
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{names}\NormalTok{(tpContrato)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Código"    "Descrição"
+\end{verbatim}
+
+
+\end{document}

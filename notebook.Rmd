@@ -1,0 +1,83 @@
+---
+title: "LicitaÃƒÂ§ÃƒÂµes em Santa Catarina desde 2014"
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
+---
+
+#########################################################
+# 	            Ministério do Planejamento              #
+#                Desenvolvimento e Gestão               #
+# CRIADO - 24 de Setembro de 2014, 16:17 (UTC-03:00)    # 
+# ATUALIZADO - 22 de Outubro de 2018, 16:58 (UTC-03:00) #
+#                   Frequência - Mensal                 #
+#########################################################
+Fornecedores de SC tenho apenas 500 de 15.138
+
+Ministério do Planejamento, Desenvolvimento e Gestão - MP
+O Ministério do Planejamento, Desenvolvimento e Gestão (MP) é um órgão integrante do poder Executivo Federal, que atua na:
+   
+Formulação do planejamento estratégico nacional;
+Avaliação dos impactos socioeconômicos das políticas e programas do governo federal e na elaboração de estudos especiais para a reformulação de políticas;
+Realização de estudos e pesquisas para acompanhamento da conjuntura socioeconômica e gestão dos istemas cartográficos e estatísticos nacionais;
+Elaboração, acompanhamento e avaliação das leis de iniciativa do Poder Executivo federal previstas no rt. 165 da Constituição;
+Viabilização de novas fontes de recursos para os planos de governo;
+Coordenação da gestão de parcerias público-privadas (PPP’s);
+Coordenação do Programa de Aceleração do Crescimento – PAC;
+Formulação de diretrizes, coordenação das negociações, acompanhamento e avaliação dos financiamentos externos de projetos públicos com organismos multilaterais e agências governamentais;
+Coordenação e gestão dos sistemas de planejamento e orçamento federal, de pessoal civil, de administraço de recursos da informação e informática e de serviços gerais, bem como das ações de organização e odernização administrativa do governo federal;
+Formulação de diretrizes, coordenação e definição de critérios de governança corporativa das empresas estatais federais;
+Administração patrimonial; e
+Política e diretrizes para modernização da administração pública federal.
+
+
+ http://dados.gov.br/dataset/compras-publicas-do-governo-federal
+
+```{r}
+
+library(readr)
+contratos <- read_csv("http://compras.dados.gov.br/contratos/v1/contratos.csv")
+names(contratos)
+```
+```{r}
+fornecedor <- function(x){
+  sprintf('http://compras.dados.gov.br/fornecedores/v1/fornecedores.csv?uf=SC&offset=%02d', x)
+}
+
+fornecedoresSC <- read_csv("http://compras.dados.gov.br/fornecedores/v1/fornecedores.csv?uf=SC")
+
+i = 500
+while(i <= 15000){
+  forn <- fornecedor(i)
+  forn <- read_csv(forn)
+  fornecedoresSC = rbind(fornecedoresSC, forn)
+  i = i + 500
+}
+```
+```{r}
+IRP <- read_csv("http://compras.dados.gov.br/licitacoes/v1/irps.csv")
+names(IRP)
+```
+
+```{r}
+licitacoes <- read_csv("http://compras.dados.gov.br/licitacoes/v1/licitacoes.csv")
+names(licitacoes)
+```
+
+```{r}
+materiais <- read_csv("http://compras.dados.gov.br/materiais/v1/materiais.csv")
+names(materiais)
+```
+
+```{r}
+servicos <- read_csv("http://compras.dados.gov.br/servicos/v1/servicos.csv")
+names(servicos)
+```
+
+```{r}
+tpContrato <- read_csv("http://compras.dados.gov.br/contratos/v1/tipos_contrato.csv")
+names(tpContrato)
+```
+
